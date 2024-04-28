@@ -1,0 +1,28 @@
+:root {
+  /* Generated from Material Theme Builder Figma plugin
+     or `material-color-utilities`. */
+  --md-sys-color-primary:#039BE5;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-secondary: #FFFFFF;
+  --md-sys-color-primary-container: #039BE5;
+  --md-sys-color-on-primary-container: #002020;
+  /* ... */
+}
+body{
+background-color:  #eef1f5 ;
+ background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+    background-repeat: no-repeat;
+}
+.main-form {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+.either-span{
+padding-top:10px;
+font-weight:bold;
+}
+.header{
+text-align:center;
+}
