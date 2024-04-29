@@ -1,0 +1,79 @@
+:root {
+  /* Generated from Material Theme Builder Figma plugin
+     or `material-color-utilities`. */
+  --md-sys-color-primary:#272777;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-secondary: #FFFFFF;
+  --md-sys-color-primary-container: #039BE5;
+  --md-sys-color-on-primary-container: #002020;
+  --body-color:#f5f5f5;
+  --text-color:#272777;
+  /* ... */
+}
+html,body{
+  height: 100% !important;
+    margin: 0 !important;
+padding:0 !important;}
+h1,h2,h3,h4,h5,p,span{
+color:var(--text-color);
+}
+main{
+height:100%;
+}
+body{
+background-color:var(--body-color) ;
+ background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+    background-repeat: no-repeat;
+
+}
+.main-form {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+.either-span{
+padding-top:10px;
+font-weight:bold;
+}
+.header{
+height:100%;
+position:relative;
+text-align:center;
+}
+.short-context{
+  letter-spacing: 0.2px;
+  word-spacing: 0.3px;
+  width: 70vw;
+  margin: 0 auto;
+}
+/* login page css */
+.login-form{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:2rem;
+
+}
+.login-container{
+position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  width:450px;
+  height:450px;
+   background: rgba(255, 255, 255, 0.15); /* Adjust opacity as needed */
+    border-radius: 10px; /* Adjust border radius */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Adjust shadow color and size */
+    backdrop-filter: blur(10px); /* Apply backdrop filter for blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    justify-content:center;
+    }
+.login-buttons {
+display:flex;
+gap:2rem;
+
+}
+/* --- --- --- */

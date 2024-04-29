@@ -23,33 +23,15 @@
   </script>
     {% block custom_js %} {% endblock %}
 
-    <title>{% block title %} {% endblock %}</title>
+    <title>Assistant | {% block title %} {% endblock %}</title>
 </head>
 <body>
+<main>
 {% block content %}
-<section class="header">
-  <h1 class="md-typescale-display-medium">Snapchat Campaigns</h1>
-  <h5 class="md-typescale-headline-medium">You can either</h5>
 
-  <form class="main-form">
-
-      <div>
-
-      <md-elevated-button href="">Add New Users</md-elevated-button>
-</div>
-
-
-          <span class="either-span"> .. or .. </span>
-
-<div>
-                <md-elevated-button href="">Generate Random Users</md-elevated-button>
-
-
-      </div>
-  </form>
-       </section>
 {% endblock %}
-    <link rel="stylesheet" type="text/css" href="{% static 'SnapchatCampaigns/css/base.css' %}"
+    </main>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/base.css' %}"/>
 
 </body>
 </html>

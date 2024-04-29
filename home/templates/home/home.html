@@ -1,0 +1,17 @@
+{% extends 'home/base.html' %}
+{% block title %}
+{{ title }}
+{% endblock %}
+{%  block content %}
+<section class="header">
+  <h1 class="md-typescale-display-medium">Snapchat Campaigns Assistant</h1>
+  <h5 class="md-typescale-headline-medium">You handy assistant in your business journey</h5>
+    <div class="short-context">
+    <p class="md-typescale-headline-small" >I will help you to do your business campaigns on snapchat with ease, making you able to create and manage your audience segments with confident</p>
+    </div>
+      <md-elevated-button href="{% url 'login-page' %}">Let's Start Our Journey</md-elevated-button>
+
+
+       </section>
+
+{% endblock %}

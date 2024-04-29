@@ -1,0 +1,28 @@
+{% extends 'home/base.html' %}
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block content %}
+<section class="header">
+ <section class="login-container">
+ <form class="login-form">
+     <h3 class="md-typescale-display-small">Login</h3>
+
+<!--  email   -->
+     <md-outlined-text-field label="Email" type="email">
+</md-outlined-text-field>
+<!--  password    -->
+          <md-outlined-text-field label="Password" type="password">
+</md-outlined-text-field>
+
+<!--     login button -->
+     <div class="login-buttons">
+
+     <md-elevated-button href="{% url 'login-page' %}">Login</md-elevated-button>
+     <md-elevated-button href="{% url 'register-page' %}">Register</md-elevated-button>
+
+     </div>
+ </form>
+     </section>
+</section>
+{% endblock content %}
