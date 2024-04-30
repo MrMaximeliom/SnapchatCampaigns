@@ -5,20 +5,21 @@
 {% block content %}
 <section class="header">
  <section class="login-container">
- <form class="login-form">
+ <form class="login-form" method="post">
+     {% csrf_token %}
      <h3 class="md-typescale-display-small">Login</h3>
 
 <!--  email   -->
-     <md-outlined-text-field label="Email" type="email">
+     <md-outlined-text-field label="Email" type="email" id="id_email" name="email">
 </md-outlined-text-field>
 <!--  password    -->
-          <md-outlined-text-field label="Password" type="password">
+          <md-outlined-text-field label="Password" type="password" id="id_password" name="password">
 </md-outlined-text-field>
 
 <!--     login button -->
      <div class="login-buttons">
 
-     <md-elevated-button href="{% url 'login-page' %}">Login</md-elevated-button>
+     <md-elevated-button >Login</md-elevated-button>
      <md-elevated-button href="{% url 'register-page' %}">Register</md-elevated-button>
 
      </div>

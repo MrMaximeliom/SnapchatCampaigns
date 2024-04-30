@@ -1,5 +1,6 @@
 {% load static %}
 {% load static i18n %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% block custom_css %} {% endblock %}
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script type="importmap">
     {
       "imports": {
@@ -26,12 +28,21 @@
     <title>Assistant | {% block title %} {% endblock %}</title>
 </head>
 <body>
+
 <main>
+
+{{ message|json_script:"alert-data" }}
+
+
+
 {% block content %}
+
+
 
 {% endblock %}
     </main>
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/base.css' %}"/>
-
+    <script src="{% static 'home/js/base.js' %}" ></script>
+    <script src="{% static 'home/js/alert.js' %}" ></script>
 </body>
 </html>
