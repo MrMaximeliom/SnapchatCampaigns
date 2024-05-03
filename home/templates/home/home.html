@@ -5,13 +5,62 @@
 {%  block content %}
 <section class="header">
   <h1 class="md-typescale-display-medium">Snapchat Campaigns Assistant</h1>
+  {% if not request.user.is_authenticated %}
   <h5 class="md-typescale-headline-medium">You handy assistant in your business journey</h5>
     <div class="short-context">
     <p class="md-typescale-headline-small" >I will help you to do your business campaigns on snapchat with ease, making you able to create and manage your audience segments with confident</p>
     </div>
       <md-elevated-button href="{% url 'login-page' %}">Let's Start Our Journey</md-elevated-button>
 
+  {% else %}
+<article class="details">
+  <h3 class="md-typescale-headline-small">Here are the steps you need to take to get you started:</h3>
+  <div class="content-section">
+     <dl>
+        <dt class="md-typescale-title-large">1.Register as Snapchat Developer:</dt>
+       <dd class="md-typescale-title-medium">Go to the Snapchat Developer Portal (<a href="https://developers.snapchat.com" target="_blank">https://developers.snapchat.com</a>)</dd>
+        <dd class="md-typescale-title-medium">Sign up for a developer account if you don't have one already.</dd>
+        <dd class="md-typescale-title-medium">Complete the required registration steps and agree to the terms and conditions.</dd>
 
-       </section>
+        <dt class="md-typescale-title-large">2.Create a Snapchat Business Account:</dt>
+       <dd class="md-typescale-title-medium">If you don't already have a Snapchat Business Account, create one by visiting the Snapchat Ads Manager (<a href="https://ads.snapchat.com" target="_blank">https://ads.snapchat.com</a>)</dd>
+        <dd class="md-typescale-title-medium">Follow the instructions to set up your business account, including providing your business details and payment information.</dd>
+
+        <dt class="md-typescale-title-large">3.Create a Snapchat App:</dt>
+        <dd class="md-typescale-title-medium">In the Snapchat Developer Portal, navigate to the "My Apps" section.</dd>
+        <dd class="md-typescale-title-medium">Click on "Create App" and provide the necessary details, such as the app name, description, and logo.</dd>
+        <dd class="md-typescale-title-medium">Select the "Snapchat Ads" product and choose the appropriate app permissions based on your requirements.</dd>
+
+        <dt class="md-typescale-title-large">4.Generate API Credentials:</dt>
+        <dd class="md-typescale-title-medium">After creating the app, go to the "My Apps" section and click on your app's name.</dd>
+        <dd class="md-typescale-title-medium">Under the "Keys" tab, click on "Create" to generate the necessary API credentials.</dd>
+        <dd class="md-typescale-title-medium">Take note of the generated Client ID and Client Secret as you'll need them in the next steps.</dd>
+
+        <dt class="md-typescale-title-large">5.Set Up Authentication::</dt>
+        <dd class="md-typescale-title-medium">Choose the appropriate authentication method based on your app's requirements. Snapchat supports OAuth 2.0 for authentication.</dd>
+        <dd class="md-typescale-title-medium">Implement the authentication flow in your app to obtain an access token.</dd>
+     </dl>
+
+
+  </div>
+  </article>
+  <section class="setup-app-keys">
+        <h3 class="md-typescale-headline-small">After completing the above steps, we need the following keys to help you create your audience segments:</h3>
+      <div class="content-section">
+        <ul >
+          <li class="badge">Client ID</li>
+          <li class="badge">Client Secret</li>
+          <li class="badge">Redirect URI</li>
+          <li class="badge">Account ID</li>
+        </ul>
+
+      </div>
+                  <md-elevated-button class="setup-btn" href="{% url 'login-page' %}">Setup Them Now <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 256 256"><path d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z"></path></svg></md-elevated-button>
+
+</section>
+
+  {% endif %}
+
+</section>
 
 {% endblock %}

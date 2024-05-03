@@ -1,6 +1,5 @@
 {% load static %}
 {% load static i18n %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,9 +31,12 @@
 <main>
 
 {{ message|json_script:"alert-data" }}
-
-
-
+{% if request.user.is_authenticated %}
+    <div class="user-info">
+    <span class="md-typescale-label-large badge">Welcome {{user.email}}</span>
+     <md-elevated-button href="{% url 'logout-page' %}">Logout</md-elevated-button>
+    </div>
+{% endif %}
 {% block content %}
 
 
@@ -44,5 +46,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/base.css' %}"/>
     <script src="{% static 'home/js/base.js' %}" ></script>
     <script src="{% static 'home/js/alert.js' %}" ></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
 </body>
 </html>

@@ -6,8 +6,9 @@ from .models import User
 from django.contrib.auth.password_validation import validate_password as validate
 from SnapchatCampaigns.sweet_alert_message import SweetAlertMessage
 from SnapchatCampaigns.constants import SweetAlertIcons
-from django.contrib.auth import authenticate,login as auth_login
+from django.contrib.auth import authenticate,login as auth_login,logout as auth_logout
 # Create your views here.
+
 def login(request):
     context = {
         'title': "Login",
@@ -90,3 +91,7 @@ def register(request):
         })
 
     return render(request, 'accounts/register.html', context)
+def logout(request):
+    request.session['message'] = SweetAlertMessage("Logout","See you later!",SweetAlertIcons.INFO_ICON.value).getAlert()
+    auth_logout(request)
+    return redirect('login-page')

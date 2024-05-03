@@ -1,6 +1,4 @@
 :root {
-  /* Generated from Material Theme Builder Figma plugin
-     or `material-color-utilities`. */
   --md-sys-color-primary:#272777;
   --md-sys-color-on-primary: #FFFFFF;
   --md-sys-color-secondary: #FFFFFF;
@@ -8,12 +6,20 @@
   --md-sys-color-on-primary-container: #002020;
   --body-color:#f5f5f5;
   --text-color:#272777;
-  /* ... */
+  --badge-color:#4d4da2;
+
 }
 html,body{
   height: 100% !important;
     margin: 0 !important;
-padding:0 !important;}
+padding:0 !important;
+
+color:var(--text-color) !important;
+
+}
+body{
+overflow-x:hidden;
+}
 h1,h2,h3,h4,h5,p,span{
 color:var(--text-color);
 }
@@ -46,6 +52,61 @@ text-align:center;
   word-spacing: 0.3px;
   width: 70vw;
   margin: 0 auto;
+}
+.badge{
+display: inline-block;
+  padding: 12px;
+  background-color: var(--badge-color);
+  color: #fff;
+  border-radius: 12px;
+
+}
+.content-section{
+  padding: 20px;
+  background-color: #9595c424;
+  border-radius: 20px;
+  width:80%;
+  }
+.setup-btn{
+margin:24px 0px;
+}
+.content-section ul{
+text-align:center;
+
+}
+.content-section ul li{
+margin:3px;
+}
+.content-section dl{
+padding:5px;
+letter-spacing: 0.4px;
+}
+.content-section dt{
+padding:7px 2px;
+word-spacing:1px;
+}
+.content-section dd{
+padding:2px;
+word-spacing:1px;
+}
+.content-section dd a{
+text-decoration:none;
+color:#4540f5f5;
+}
+.setup-app-keys{
+width:80%;
+margin-left:5rem;
+text-align:start;
+}
+
+.user-info{
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+}
+.details{
+text-align:start;
+margin-left:5rem;
 }
 /* login page css */
 .login-form{

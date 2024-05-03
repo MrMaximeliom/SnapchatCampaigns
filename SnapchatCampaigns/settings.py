@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'SnapchatCampaigns',
     'home',
     'accounts',
+    'user_settings'
 
 ]
 
